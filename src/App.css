@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Black.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-BlackItalic.ttf');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-SemiBoldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro Bbook';
+  src: url('./fonts/PFBeauSansPro-Bbook.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro Bbook';
+  src: url('./fonts/PFBeauSansPro-BbookItalic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Thin.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-ThinItalic.ttf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro XThin';
+  src: url('./fonts/PFBeauSansPro-XThin.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF BeauSans Pro XThin';
+  src: url('./fonts/PFBeauSansPro-XThinItalic.ttf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/*@font-face {
+  font-family: 'PF BeauSans Pro';
+  src: url('./fonts/PFBeauSansPro-Light.eot'),
+  url('./fonts/PFBeauSansPro-Light.woff') format('woff'),
+  url('./fonts/PFBeauSansPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PF BeauSans Pro', sans-serif;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+}
+
+.react-transform-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: auto;
+}
+
+.outer-container {
+  transition: 0.3s transform;
+}
+
+.svg-container {
+  cursor: grab;
+}
+
+.operator .svg-container svg path[data-place],
+.operator .svg-container svg path[data-type],
+.operator .svg-container svg path[data-office] {
+  stroke: green;
+}
+
+.operator .svg-container svg path[data-place]:hover:before {
+  content: '123';
+  position: absolute;
+  background: #fff;
+  border: black;
+  left: 200px;
+  top: 200px;
+  z-index: 99999999999999;
+}
+
+.svg-container svg path:hover {
+  cursor: pointer;
+  stroke: red;
+}
+
+.svg-container img {
+  pointer-events: none;
+  outline: 1px dashed lightgray;
+}
+
+.tools {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.tools span {
+  display: flex;
+  padding: 0 6px;
+  min-width: 55px;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.tools button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ebf7ff;
+  border: 2px solid #bde4ff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.15s border-color;
+}
+
+.tools button:hover {
+  border-color: #79bde9;
+}
+
+.tools button:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.tools button:last-child {
+  margin-top: 12px;
+}
+
+.tools button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
